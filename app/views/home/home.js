@@ -4,11 +4,11 @@ angular.module('freeApp.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
-    templateUrl: 'home/home.html',
+    templateUrl: 'views/home/home.html',
     controller: 'homeCtrl'
   });
 }])
 
 .controller('homeCtrl', [function() {
-
+	console.log('postProjectCtrl');
 }]);
