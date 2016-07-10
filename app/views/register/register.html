@@ -1,0 +1,19 @@
+<div class="register-block">
+
+	<div class="alert alert-info registration-alert registration-processing" role="alert">Registration Processing....</div>
+	<div class="alert alert-success registration-alert registration-done" role="alert">Great Job..!!</div>
+	<div class="alert alert-danger registration-alert registration-failed" role="alert">Registration Failed..!!</div>
+
+	<h2>Register With Us</h2>
+	<div class="register-form">
+		<div class="register-row">
+			<input type="email" placeholder="Email ID" class="form-control" ng-model="registerEmail" id="registerEmail" />
+		</div>
+		<div class="register-row">
+			<input type="password" placeholder="Password" class="form-control" ng-model="registerPassword" id="registerPassword" />
+		</div>
+		<div class="register-row">
+			<input type="button" value="Regsiter" class="auth-btn" ng-click="getRegistration()" />
+		</div>
+	</div>
+</div>
