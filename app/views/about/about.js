@@ -11,4 +11,6 @@ angular.module('freeApp.about', ['ngRoute'])
 
 .controller('aboutCtrl', [function() {
 
+	
+
 }]);
