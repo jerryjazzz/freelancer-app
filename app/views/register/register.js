@@ -11,7 +11,7 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
 
 }])
 
-.controller('registerCtrl', ['$scope', 'firebaseService', '$firebaseArray', function($scope, firebaseService, $firebaseArray){
+.controller('registerCtrl', ['$scope', 'firebaseService', '$firebaseArray','$location','$window', function($scope, firebaseService, $firebaseArray, $location, $window){
 
 	console.log('Register Controller');
 	// console.log(firebaseService.firebaseUrl('userTable'));
@@ -20,6 +20,8 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
 
 		var getEmail = $scope.registerEmail;
 		var getPassword = $scope.registerPassword;
+
+		alert(getEmail);
 
 		var ref = new Firebase(firebaseService.firebaseUrl());
 
@@ -32,6 +34,7 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
             }
             else {
                 console.log("Successfully created user account with uid:", userData.uid);
+                $window.location.href = '#/login';
             }
         });
 

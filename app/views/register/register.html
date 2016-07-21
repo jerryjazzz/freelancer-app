@@ -6,14 +6,16 @@
 
 	<h2>Register With Us</h2>
 	<div class="register-form">
-		<div class="register-row">
-			<input type="email" placeholder="Email ID" class="form-control" ng-model="registerEmail" id="registerEmail" />
-		</div>
-		<div class="register-row">
-			<input type="password" placeholder="Password" class="form-control" ng-model="registerPassword" id="registerPassword" />
-		</div>
-		<div class="register-row">
-			<input type="button" value="Regsiter" class="auth-btn" ng-click="getRegistration()" />
-		</div>
+		<form name="registerForm" novalidate>
+			<div class="register-row">
+				<input type="email" placeholder="Email ID" class="form-control" name="registerEmail" ng-model="registerEmail" id="registerEmail" required />
+			</div>
+			<div class="register-row">
+				<input type="password" placeholder="Password" class="form-control" name="registerPassword" ng-model="registerPassword" id="registerPassword" required />
+			</div>
+			<div class="register-row">
+				<input type="button" value="Regsiter" class="auth-btn" ng-click="getRegistration()" />
+			</div>
+		</form>
 	</div>
 </div>
