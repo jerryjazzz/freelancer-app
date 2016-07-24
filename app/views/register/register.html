@@ -8,10 +8,27 @@
 	<div class="register-form">
 		<form name="registerForm" novalidate>
 			<div class="register-row">
+				<input type="text" placeholder="Username" class="form-control" name="registerUsername" ng-model="registerUsername" id="registerUsername" required />
+			</div>
+			<div class="register-row">
 				<input type="email" placeholder="Email ID" class="form-control" name="registerEmail" ng-model="registerEmail" id="registerEmail" required />
 			</div>
 			<div class="register-row">
 				<input type="password" placeholder="Password" class="form-control" name="registerPassword" ng-model="registerPassword" id="registerPassword" required />
+			</div>
+			<div class="register-row">
+				<input type="password" placeholder="Confirm Password" class="form-control" name="registerConfirmPassword" ng-model="registerConfirmPassword" id="registerConfirmPassword" required />
+			</div>
+			<div class="register-row">
+				<label>I want to?</label>
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="hire" />
+					<label for="hire">Hire</label>
+				</span>
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="work" />
+					<label for="work">Work</label>
+				</span>
 			</div>
 			<div class="register-row">
 				<input type="button" value="Regsiter" class="auth-btn" ng-click="getRegistration()" />

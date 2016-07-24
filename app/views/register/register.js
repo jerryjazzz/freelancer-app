@@ -18,12 +18,13 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
 
 	$scope.getRegistration = function(){
 
+		var getUsername = $scope.registerUsername;
 		var getEmail = $scope.registerEmail;
 		var getPassword = $scope.registerPassword;
-
-		alert(getEmail);
+		var getWantto = $scope.registerFor;
 
 		var ref = new Firebase(firebaseService.firebaseUrl());
+		var userTableRef = new Firebase(firebaseService.firebaseUrl()+'/usertable');
 
 		ref.createUser({
             email    : getEmail,
@@ -33,6 +34,7 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
                 console.log("Error creating user:", error);
             }
             else {
+            	userTableRef.push({username:getUsername, email:getEmail});
                 console.log("Successfully created user account with uid:", userData.uid);
                 $window.location.href = '#/login';
             }
