@@ -34,7 +34,7 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
                 console.log("Error creating user:", error);
             }
             else {
-            	userTableRef.push({username:getUsername, email:getEmail});
+            	userTableRef.push({userId:userData.uid, username:getUsername, email:getEmail});
                 console.log("Successfully created user account with uid:", userData.uid);
                 $window.location.href = '#/login';
             }

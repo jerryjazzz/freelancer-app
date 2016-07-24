@@ -1,0 +1,73 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<h1>Post Project</h1>
+		<table class="table table-bordered">
+			<tr>
+				<td><h3>What type of work do you require</h3></td>
+				<td>
+					<select ng-model="workCategory">
+						<option selected value="Select Category of work">Select Category of work</option>
+                    	<option value="Websites IT &amp; Software">Websites IT &amp; Software</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Writing">Writing</option>
+                        <option value="Design">Design</option>
+                        <option value="Data Entry">Data Entry</option>
+                        <option value="Product Sourcing &amp; Manufacturing">Product Sourcing &amp; Manufacturing</option>
+                        <option value="Sales &amp; Marketing">Sales &amp; Marketing</option>
+                        <option value="Business, Accounting &amp; Legal">Business, Accounting &amp; Legal</option>
+                        <option value="Local Jobs &amp; Services">Local Jobs &amp; Services</option>
+                    </select><br />
+                    <select id="project-sub-category" name="skill_subcategory" ng-model="selectJob">
+                    	<option value="Select a job">Select a job</option>
+                    	<option value="Build a Website">Build a Website</option>
+                    	<option value="Build an Online Store">Build an Online Store</option>
+                    	<option value="Get Traffic to my Website">Get Traffic to my Website</option>
+                    	<option value="Write some Software">Write some Software</option>
+                    	<option value="Convert a Template to a Website">Convert a Template to a Website</option>
+                    	<option value="Create a WordPress Template">Create a WordPress Template</option>
+                    	<option value="Create a Joomla Template">Create a Joomla Template</option>
+                    	<option value="Create a Drupal Template">Create a Drupal Template</option>
+                    	<option value="Develop a Mac Application">Develop a Mac Application</option>
+                    </select>
+                </td>
+			</tr>
+			<tr>
+				<td><h3>Tell us more about your project.</h3></td>
+				<td>
+					<label>What skills are required?</label>
+					<select multiple ng-model="skillsRequired">
+						<option value="Shopping Carts">Shopping Carts</option>
+						<option value="Ecommerce">Ecommerce</option>
+						<option value="HTML">HTML</option>
+						<option value="CSS">CSS</option>
+						<option value="jQuery">jQuery</option>
+						<option value="Bootstrap">Bootstrap</option>
+					</select><br /><br />
+					<label>Describe your project</label>
+					<textarea ng-model="projectDescription"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><h3>What budget do you have in mind?</h3></td>
+				<td>
+					<select ng-model="projectBudget">
+						<option value="Micro project (1500)">Micro project (1500)</option>
+						<option value="Simple project (12500)">Simple project (12500)</option>
+						<option value="Very Small Project (37500)">Very Small Project (37500)</option>
+						<option value="Small Project (75000)">Small Project (75000)</option>
+						<option value="Medium Project (150000)">Medium Project (150000)</option>
+						<option value="Large Project (250000)">Large Project (250000)</option>
+						<option value="Larger Project (500000)">Larger Project (500000)</option>
+						<option value="Very Large Project (1000000)">Very Large Project (1000000)</option>
+						<option value="Huge Project (2500000)">Huge Project (2500000)</option>
+						<option value="Mazor Project (5000000)">Mazor Project (5000000)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><a href="" class="btn btn-default">Post Project Now</a></td>
+			</tr>
+		</table>
+	</div>
+</div>
