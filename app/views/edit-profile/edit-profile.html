@@ -1,0 +1,92 @@
+<div class="container">
+	<h1>Edit Profile</h1>
+	<div>
+  		<ul class="nav nav-tabs" role="tablist">
+    		<li role="presentation" class="active"><a href="edit-profile/#personal" aria-controls="personal" role="tab" data-toggle="tab">Personal</a></li>
+    		<li role="presentation"><a href="edit-profile/#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+    		<li role="presentation"><a href="edit-profile/#gurdian" aria-controls="gurdian" role="tab" data-toggle="tab">Gurdian</a></li>
+    		<li role="presentation"><a href="edit-profile/#previousQualification" aria-controls="previousQualification" role="tab" data-toggle="tab">Previous Qualification</a></li>
+  		</ul>
+  		<div class="tab-content">
+    		<div role="tabpanel" class="tab-pane active" id="personal">
+    			<br />
+    			<div class="alert alert-success" role="alert">Personal Profile Edit Successfull..!!</div>
+    			<form>
+  					<div class="form-group">
+    					<label>Register Number</label>
+    					<input type="text" class="form-control" placeholder="Regsiter Number" ng-model="personal.registerNumber" />
+  					</div>
+  					<div class="form-group">
+    					<label>Joining Date</label>
+    					<input type="text" class="form-control" placeholder="Joining Date" ng-model="personal.joiningDate" />
+  					</div>
+  					<div class="form-group">
+    					<label>Course</label>
+    					<input type="text" class="form-control" placeholder="Course" ng-model="personal.course" />
+  					</div>
+  					<div class="form-group">
+    					<label>Batch</label>
+    					<select class="form-control" ng-model="personal.batch">
+    						<option value="1">1</option>
+    						<option value="2">2</option>
+    						<option value="3">3</option>
+    						<option value="4">4</option>
+    					</select>
+  					</div>
+  					<div class="form-group">
+    					<label>First Name</label>
+    					<input type="text" class="form-control" placeholder="First Name" ng-model="personal.firstName" />
+  					</div>
+  					<div class="form-group">
+    					<label>Last Name</label>
+    					<input type="text" class="form-control" placeholder="Last Name" ng-model="personal.lastName" />
+  					</div>
+  					<div class="form-group">
+    					<label>Date of Birth</label>
+    					<input type="text" class="form-control" placeholder="Date of Birth" ng-model="personal.dateofBirth" />
+  					</div>
+  					<div class="form-group">
+    					<label>Gender</label>
+    					<select class="form-control" ng-model="personal.gender">
+    						<option value="male">Male</option>
+    						<option value="female">female</option>
+    					</select>
+  					</div>
+  					<div class="form-group">
+    					<label>Blood Group</label>
+    					<select class="form-control" ng-model="personal.bloodGroup">
+    						<option value="A+">A+</option>
+    						<option value="A-">A-</option>
+    						<option value="B+">B+</option>
+    						<option value="B-">B-</option>
+    						<option value="O+">O+</option>
+    						<option value="O-">O-</option>
+    						<option value="AB+">AB+</option>
+    						<option value="AB-">AB-</option>
+    					</select>
+  					</div>
+  					<div class="form-group">
+    					<label>Birth Place</label>
+    					<input type="text" class="form-control" placeholder="Birth Place" ng-model="personal.birthPlace" />
+  					</div>
+  					<div class="form-group">
+    					<label>Nationality</label>
+    					<input type="text" class="form-control" placeholder="Nationality" ng-model="personal.nationality" />
+  					</div>
+  					<div class="form-group">
+    					<label>Mother Tongue</label>
+    					<input type="text" class="form-control" placeholder="Mother Tongue" ng-model="personal.motherToungue" />
+  					</div>
+  					<div class="form-group">
+    					<label>Religion</label>
+    					<input type="text" class="form-control" placeholder="Religion" ng-model="personal.religion" />
+  					</div>
+  					<button type="submit" class="btn btn-default" ng-click="savePersonalProfile()">Save</button>
+				</form>
+    		</div>
+    		<div role="tabpanel" class="tab-pane" id="contact">...</div>
+    		<div role="tabpanel" class="tab-pane" id="gurdian">...</div>
+    		<div role="tabpanel" class="tab-pane" id="previousQualification">...</div>
+  		</div>
+	</div>
+</div>

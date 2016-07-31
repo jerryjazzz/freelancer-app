@@ -5,9 +5,9 @@ var myApp = angular.module('freeApp', [
 	'firebase',
 	'freeApp.home',
 	'freeApp.about',
-	'freeApp.postProject',
 	'freeApp.register',
-	'freeApp.login'
+	'freeApp.login',
+	'freeApp.editProfile'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$routeProvider.otherwise({redirectTo: '/home'});

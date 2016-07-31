@@ -10,11 +10,9 @@
 		  	<a class="navbar-brand" href="#/home"><img src="images/logo.png" alt="logo" /></a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#/post-project">Post Project</a></li>
-				<li ng-if="logged == 'loggedOut'"><a href="#/register">Register</a></li>
-				<li ng-if="logged == 'loggedOut'"><a href="#/login">Login</a></li>
-				<li ng-if="logged == 'loggedIn'" ng-click="unauth()"><a href="">Logout</a></li>
+			<ul class="nav navbar-nav navbar-right" ng-if="logged == 'loggedIn'">
+				<li><a href="#/edit-profile">Edit Profile</a></li>
+				<li ng-click="unauth()"><a href="">Logout</a></li>
 			</ul>
 		</div>
 	</div>

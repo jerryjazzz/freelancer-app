@@ -8,7 +8,21 @@
 	<div class="register-form">
 
 		<form action="#" method="post">
-
+			<div class="register-row">
+				<label>I am a?</label><br />
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="admin" value="admin" />
+					<label for="admin">Admin</label>
+				</span>
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="student" value="student" />
+					<label for="student">Student</label>
+				</span>
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="gurdian" value="gurdian" />
+					<label for="gurdian">Guardian</label>
+				</span>
+			</div>
 			<div class="register-row">
 				<input type="email" placeholder="Email" class="form-control" ng-model="loginEmail" />
 			</div>
@@ -20,6 +34,8 @@
 			</div>
 
 		</form>
+
+		<a href="#/register">Don't Have Account? Register Here..!!</a>
 
 	</div>
 </div>
