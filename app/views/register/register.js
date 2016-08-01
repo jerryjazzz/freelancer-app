@@ -34,7 +34,7 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
             }
             else {
                 console.log("Successfully created user account with uid:", userData.uid);
-                $window.location.href = '#/login';
+                $window.location.href = '/login';
             }
         });
 
