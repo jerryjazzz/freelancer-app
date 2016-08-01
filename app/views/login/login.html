@@ -1,1 +1,41 @@
-<h2>Login</h2>
+<div class="register-block">
+
+	<div class="alert alert-info registration-alert registration-processing" role="alert">Registration Processing....</div>
+	<div class="alert alert-success registration-alert registration-done" role="alert">Great Job..!!</div>
+	<div class="alert alert-danger registration-alert registration-failed" role="alert">Registration Failed..!!</div>
+
+	<h2>Register With Us</h2>
+	<div class="register-form">
+
+		<form action="#" method="post">
+			<div class="register-row">
+				<label>I am a?</label><br />
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="admin" value="admin" />
+					<label for="admin">Admin</label>
+				</span>
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="student" value="student" />
+					<label for="student">Student</label>
+				</span>
+				<span>
+					<input type="radio" name="registerFor" ng-model="registerFor" id="gurdian" value="gurdian" />
+					<label for="gurdian">Guardian</label>
+				</span>
+			</div>
+			<div class="register-row">
+				<input type="email" placeholder="Email" class="form-control" ng-model="loginEmail" />
+			</div>
+			<div class="register-row">
+				<input type="password" placeholder="Password" class="form-control" ng-model="loginPassword" />
+			</div>
+			<div class="register-row">
+				<button type="button" class="auth-btn" ng-click="loginWithUs()">Login</button>
+			</div>
+
+		</form>
+
+		<a href="#/register">Don't Have Account? Register Here..!!</a>
+
+	</div>
+</div>

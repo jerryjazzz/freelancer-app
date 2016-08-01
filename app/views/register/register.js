@@ -18,10 +18,10 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
 
 	$scope.getRegistration = function(){
 
+		var getUsername = $scope.registerUsername;
 		var getEmail = $scope.registerEmail;
 		var getPassword = $scope.registerPassword;
-
-		alert(getEmail);
+		var getWantto = $scope.registerFor;
 
 		var ref = new Firebase(firebaseService.firebaseUrl());
 
@@ -33,8 +33,26 @@ angular.module('freeApp.register', ['ngRoute', 'firebase'])
                 console.log("Error creating user:", error);
             }
             else {
+<<<<<<< HEAD
                 console.log("Successfully created user account with uid:", userData.uid);
                 $window.location.href = '/login';
+=======
+            	if(getWantto == 'admin'){
+            		var userTableRef = new Firebase(firebaseService.firebaseUrl()+'/adminTable');
+            		userTableRef.push({userId:userData.uid, username:getUsername, email:getEmail});
+                	$window.location.href = '#/login';
+                }
+                else if(getWantto == 'student'){
+                	var userTableRef = new Firebase(firebaseService.firebaseUrl()+'/studentTable');
+                	userTableRef.push({userId:userData.uid, username:getUsername, email:getEmail});
+                	$window.location.href = '#/login';
+                }
+                else{
+                	var userTableRef = new Firebase(firebaseService.firebaseUrl()+'/gurdianTable');
+                	userTableRef.push({userId:userData.uid, username:getUsername, email:getEmail});
+                	$window.location.href = '#/login';
+                }
+>>>>>>> 5ace405d2b937a57334bc7e67f9b0586462f5a66
             }
         });
 
